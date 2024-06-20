@@ -1,8 +1,9 @@
+#if canImport(UIKit)
 import UIKit
 
 public extension UIColor {
     
-    convenience init(light: CGColor, dark:CGColor) {
+    convenience init(light: CGColor, dark: CGColor) {
         self.init { traitCollection in
             switch traitCollection.userInterfaceStyle {
             case .dark:
@@ -15,3 +16,4 @@ public extension UIColor {
         }
     }
 }
+#endif

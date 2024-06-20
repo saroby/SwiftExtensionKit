@@ -1,17 +1,21 @@
+#if canImport(UIKit)
 import UIKit
 
-
-public extension UIView {
+extension UIView {
+    
+    @IBInspectable
+    public var borderWidth: CGFloat {
+        get { self.layer.borderWidth }
+        set { self.layer.borderWidth = newValue }
+    }
     
     private struct AssociatedKeys {
         static var borderColor = "borderColor"
     }
     
     @IBInspectable
-    var borderColor: UIColor? {
-        get {
-            return objc_getAssociatedObject(self, &AssociatedKeys.borderColor) as? UIColor
-        }
+    public var borderColor: UIColor? {
+        get { objc_getAssociatedObject(self, &AssociatedKeys.borderColor) as? UIColor }
         set {
             self.layer.borderColor = newValue?.cgColor
             objc_setAssociatedObject(
@@ -23,7 +27,7 @@ public extension UIView {
         }
     }
     
-    static func swizzleTraitCollectionDidChange() {
+    public static func swizzleTraitCollectionDidChange() {
         let originalSelector = #selector(traitCollectionDidChange(_:))
         let swizzledSelector = #selector(swizzledTraitCollectionDidChange)
         
@@ -66,3 +70,4 @@ public extension UIView {
         }
     }
 }
+#endif

@@ -6,18 +6,27 @@ import PackageDescription
 let package = Package(
     name: "SwiftExtensionKit",
     platforms: [
-        .iOS(.v17),
+        .iOS(.v14),
     ], 
     products: [
         .library(
             name: "SwiftExtensionKit",
             targets: ["SwiftExtensionKit"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.7.0")),
+    ],
     targets: [
         .target(
-            name: "SwiftExtensionKit"),
+            name: "SwiftExtensionKit",
+            dependencies: []
+        ),
         .testTarget(
             name: "SwiftExtensionKitTests",
-            dependencies: ["SwiftExtensionKit"]),
+            dependencies: [
+                "SwiftExtensionKit",
+                "RxSwift",
+                .product(name: "RxCocoa", package: "RxSwift"),
+            ]),
     ]
 )
