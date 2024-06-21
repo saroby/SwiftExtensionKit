@@ -16,5 +16,4 @@ extension Observable<Bool> {
         return self.map { !$0 }
     }
 }
-
 #endif
