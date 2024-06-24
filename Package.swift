@@ -19,7 +19,10 @@ let package = Package(
     targets: [
         .target(
             name: "SwiftExtensionKit",
-            dependencies: []
+            dependencies: [
+                "RxSwift",
+                .product(name: "RxCocoa", package: "RxSwift"),
+            ]
         ),
         .testTarget(
             name: "SwiftExtensionKitTests",
