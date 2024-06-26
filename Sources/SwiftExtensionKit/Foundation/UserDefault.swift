@@ -3,8 +3,14 @@ import Foundation
 
 @propertyWrapper
 public struct UserDefault<T> {
-    public let key: String
-    public let defaultValue: T
+    let key: String
+    let defaultValue: T
+    
+    
+    public init(key: String, defaultValue: T) {
+        self.key = key
+        self.defaultValue = defaultValue
+    }
     
     public var projectedValue: T {
         return self.defaultValue
