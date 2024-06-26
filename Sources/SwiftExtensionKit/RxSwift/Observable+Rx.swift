@@ -1,6 +1,7 @@
 #if canImport(RxSwift)
 import RxSwift
 
+
 extension Observable {
     
     public func mapToVoid() -> Observable<Void> { self.map { _ in } }
@@ -9,6 +10,7 @@ extension Observable {
     
     public func mapTo<T>(_ value: T) -> Observable<T> { self.map { _ in value } }
 }
+
 
 extension Observable<Bool> {
     

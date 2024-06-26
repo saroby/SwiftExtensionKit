@@ -5,6 +5,7 @@ protocol CommaStringable {
     func commaString() -> String
 }
 
+
 extension Int: CommaStringable {
     
     static let decimalNumberFormmtter: NumberFormatter = {
@@ -18,6 +19,7 @@ extension Int: CommaStringable {
         return Self.decimalNumberFormmtter.string(from: NSNumber(value: self)) ?? "0"
     }
 }
+
 
 extension Double: CommaStringable {
     

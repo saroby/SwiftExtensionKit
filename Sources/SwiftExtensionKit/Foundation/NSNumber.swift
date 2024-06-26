@@ -1,8 +1,10 @@
 import Foundation
 
+
 protocol NSNumberConvertible {
     func toNSNumber() -> NSNumber
 }
+
 
 extension Int: NSNumberConvertible {
     
@@ -11,12 +13,14 @@ extension Int: NSNumberConvertible {
     }
 }
 
+
 extension Int8: NSNumberConvertible {
     
     public func toNSNumber() -> NSNumber {
         return self as NSNumber
     }
 }
+
 
 extension Int16: NSNumberConvertible {
     
@@ -25,12 +29,14 @@ extension Int16: NSNumberConvertible {
     }
 }
 
+
 extension Int32: NSNumberConvertible {
     
     public func toNSNumber() -> NSNumber {
         return self as NSNumber
     }
 }
+
 
 extension Int64: NSNumberConvertible {
     
@@ -39,12 +45,14 @@ extension Int64: NSNumberConvertible {
     }
 }
 
+
 extension Float: NSNumberConvertible {
     
     public func toNSNumber() -> NSNumber {
         return self as NSNumber
     }
 }
+
 
 extension Double: NSNumberConvertible {
     
@@ -53,6 +61,7 @@ extension Double: NSNumberConvertible {
     }
 }
 
+
 extension Bool: NSNumberConvertible {
     
     public func toNSNumber() -> NSNumber {
@@ -60,12 +69,14 @@ extension Bool: NSNumberConvertible {
     }
 }
 
+
 extension UInt: NSNumberConvertible {
     
     public func toNSNumber() -> NSNumber {
         return self as NSNumber
     }
 }
+
 
 extension UInt8: NSNumberConvertible {
     
@@ -82,12 +93,14 @@ extension UInt16: NSNumberConvertible {
     }
 }
 
+
 extension UInt32: NSNumberConvertible {
     
     public func toNSNumber() -> NSNumber {
         return self as NSNumber
     }
 }
+
 
 extension UInt64: NSNumberConvertible {
     

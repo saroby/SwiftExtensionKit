@@ -1,5 +1,6 @@
 import Foundation
 
+
 extension CGSize {
     
     public static func all(_ value: CGFloat) -> CGSize {

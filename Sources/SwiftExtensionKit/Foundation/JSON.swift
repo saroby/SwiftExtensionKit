@@ -1,13 +1,16 @@
 import Foundation
 
+
 public enum JSONError: Error {
     case invalidJSONObject
     case emptyJSONString
 }
 
+
 public protocol JSONStringable {
     func JSONString(options: JSONSerialization.WritingOptions) throws -> String
 }
+
 
 extension JSONStringable {
     

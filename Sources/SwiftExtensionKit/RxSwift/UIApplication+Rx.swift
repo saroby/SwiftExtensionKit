@@ -2,6 +2,7 @@
 import UIKit
 import RxSwift
 
+
 extension RxSwift.Reactive where Base: UIApplication {
     
     public var applicationDidEnterBackground: Observable<Void> {

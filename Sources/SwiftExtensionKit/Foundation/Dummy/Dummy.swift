@@ -1,6 +1,8 @@
 import Foundation
 
+
 public extension String {
+    
     class Dummy {
         static func alphaNumeric(length: Int) -> String {
             let allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -55,14 +57,15 @@ public extension String {
     }
 }
 
+
 public extension URL {
     
     class Dummy {
-        static func image(size: Int) -> URL {
+        public static func image(size: Int) -> URL {
             return URL(string: "https://picsum.photos/\(size)?random=\(Int.random(in: 1...Int.max))")!
         }
         
-        static func audio() -> URL {
+        public static func audio() -> URL {
             return .init(string: "https://file-examples.com/storage/fe6e60472c657f757a0e725/2017/11/file_example_MP3_700KB.mp3")!
         }
     }
