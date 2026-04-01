@@ -15,6 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.7.0")),
+        .package(url: "https://github.com/layoutBox/FlexLayout", branch: "master"),
     ],
     targets: [
         .target(
@@ -22,6 +23,7 @@ let package = Package(
             dependencies: [
                 "RxSwift",
                 .product(name: "RxCocoa", package: "RxSwift"),
+                "FlexLayout",
             ]
         ),
         .testTarget(
@@ -30,6 +32,7 @@ let package = Package(
                 "SwiftExtensionKit",
                 "RxSwift",
                 .product(name: "RxCocoa", package: "RxSwift"),
+                "FlexLayout",
             ]),
     ]
 )
