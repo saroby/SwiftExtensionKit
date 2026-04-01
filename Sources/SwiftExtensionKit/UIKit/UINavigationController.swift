@@ -1,9 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-
 extension UINavigationController {
-    
     public func pushViewController(viewController: UIViewController, animated: Bool, completion: @escaping () -> Void) {
         self.pushViewController(viewController, animated: animated)
         
