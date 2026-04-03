@@ -1,7 +1,7 @@
 import Foundation
 
 
-protocol NSNumberConvertible {
+public protocol NSNumberConvertible {
     func toNSNumber() -> NSNumber
 }
 
