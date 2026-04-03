@@ -1,5 +1,5 @@
 #if canImport(UIKit)
-import UIKit
+import UIKit.UIControl
 
 extension UIControl {
     public func addAction(for controlEvents: UIControl.Event, _ action: @escaping () -> Void) {
