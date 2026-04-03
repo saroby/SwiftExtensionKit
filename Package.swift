@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SwiftExtensionKit",
     platforms: [
-        .iOS(.v14),
+        .iOS(.v15),
     ], 
     products: [
         .library(
@@ -14,8 +14,9 @@ let package = Package(
             targets: ["SwiftExtensionKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.7.0")),
+        .package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "6.10.2")),
         .package(url: "https://github.com/layoutBox/FlexLayout", branch: "master"),
+        .package(url: "https://github.com/siteline/swiftui-introspect", branch: "main"),
     ],
     targets: [
         .target(
@@ -24,6 +25,7 @@ let package = Package(
                 "RxSwift",
                 .product(name: "RxCocoa", package: "RxSwift"),
                 "FlexLayout",
+                .product(name: "SwiftUIIntrospect", package: "swiftui-introspect"),
             ]
         ),
         .testTarget(
@@ -33,6 +35,7 @@ let package = Package(
                 "RxSwift",
                 .product(name: "RxCocoa", package: "RxSwift"),
                 "FlexLayout",
+                .product(name: "SwiftUIIntrospect", package: "swiftui-introspect"),
             ]),
     ]
 )
