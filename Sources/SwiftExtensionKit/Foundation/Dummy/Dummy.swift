@@ -1,10 +1,10 @@
 import Foundation
 
 
-public extension String {
+extension String {
     
-    class Dummy {
-        static func alphaNumeric(length: Int) -> String {
+    public class Dummy {
+        public static func alphaNumeric(length: Int) -> String {
             let allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
             let allowedCharsCount = UInt32(allowedChars.count)
             var randomString = ""
@@ -19,7 +19,7 @@ public extension String {
             return randomString
         }
         
-        static func nickname() -> String {
+        public static func nickname() -> String {
             let adjectives = ["Swift", "Brave", "Clever", "Witty", "Bold", "Epic", "Fierce"]
             let nouns = ["Coder", "Developer", "Ninja", "Warrior", "Hero", "Samurai", "Wizard"]
             
@@ -31,7 +31,7 @@ public extension String {
             return "\(randomAdjective)\(randomNoun)"
         }
         
-        static func sentence() -> String {
+        public static func sentence() -> String {
             let subjects = ["The cat", "A dog", "The programmer", "An artist", "The scientist"]
             let verbs = ["jumps over", "runs to", "codes with", "paints", "analyzes"]
             let objects = ["the wall", "the park", "the computer", "a beautiful picture", "the data"]
@@ -45,7 +45,7 @@ public extension String {
             return "\(randomSubject) \(randomVerb) \(randomObject)."
         }
         
-        static func paragraph(_ numberOfSentences: Int) -> String {
+        public static func paragraph(_ numberOfSentences: Int) -> String {
             assert(numberOfSentences > 0)
             
             var sentences = [String]()
@@ -58,9 +58,9 @@ public extension String {
 }
 
 
-public extension URL {
+extension URL {
     
-    class Dummy {
+    public class Dummy {
         public static func image(size: Int) -> URL {
             return URL(string: "https://picsum.photos/\(size)?random=\(Int.random(in: 1...Int.max))")!
         }
