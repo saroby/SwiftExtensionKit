@@ -1,7 +1,7 @@
 import Foundation
 
 
-public extension String {
+extension String {
     
     public class Dummy {
         public static func alphaNumeric(length: Int) -> String {
@@ -58,7 +58,7 @@ public extension String {
 }
 
 
-public extension URL {
+extension URL {
     
     public class Dummy {
         public static func image(size: Int) -> URL {
